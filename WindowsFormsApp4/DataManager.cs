@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace WindowsFormsApp4
 {
-    class DataManager
+    class DataManager ///
     {
         public static List<Book> Books = new List<Book>();
         public static List<User> Users = new List<User>();
@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
         {
             try
             {
-                string booksOutput = File.ReadAllText(@"./Books.xml"); //xml파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Books.xml"라는 주소를 이용함
+                string booksOutput = File.ReadAllText(@"./Books.xml"); //이 형식이 xml파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Books.xml"라는 주소를 이용함
                 XElement booksXElement = XElement.Parse(booksOutput);
                 Books = (from item in booksXElement.Descendants("book")
                          select new Book()
@@ -38,7 +38,7 @@ namespace WindowsFormsApp4
                              UserId = int.Parse(item.Element("userId").Value),
                              UserName = item.Element("userName").Value
                          }).ToList<Book>();
-                string usersOutput = File.ReadAllText(@"./Users.xml"); //xml 파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Users.xml"라는 주소를 이용함
+                string usersOutput = File.ReadAllText(@"./Users.xml"); //이 형식이xml 파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Users.xml"라는 주소를 이용함
                 XElement usersXElement = XElement.Parse(usersOutput);
                 Users = (from item in usersXElement.Descendants("user")
                          select new User()
