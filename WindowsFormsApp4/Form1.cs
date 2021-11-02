@@ -120,7 +120,7 @@ namespace WindowsFormsApp4
                         book.BorrowedAt = new DateTime();
 
                         dataGridView1.DataSource = null;
-                        dataGridView2.DataSource = DataManager.Books;
+                        dataGridView1.DataSource = DataManager.Books;
                         DataManager.Save();
 
                         if (book.BorrowedAt.AddDays(7) > DateTime.Now)
