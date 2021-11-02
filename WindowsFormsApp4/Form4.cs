@@ -39,6 +39,7 @@ namespace WindowsFormsApp4
                     {
                         this.Visible = false;
                         new Form1().ShowDialog();
+                        Close();
                     }
                 }
                 catch (Exception exception)

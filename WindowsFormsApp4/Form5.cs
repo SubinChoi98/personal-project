@@ -54,7 +54,8 @@ namespace WindowsFormsApp4
                         DataManager.Save();
                         MessageBox.Show("회원가입이 완료되었습니다.");
                         this.Visible = false;
-                        new Form1().ShowDialog();
+                        new Form4().ShowDialog();
+                        Close();
                     }
                 }
                 catch (Exception exception)
