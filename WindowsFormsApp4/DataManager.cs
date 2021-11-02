@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
         {
             try
             {
-                string booksOutput = File.ReadAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Books.xml");
+                string booksOutput = File.ReadAllText(@"./Books.xml"); //xml파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Books.xml"라는 주소를 이용함
                 XElement booksXElement = XElement.Parse(booksOutput);
                 Books = (from item in booksXElement.Descendants("book")
                          select new Book()
@@ -38,7 +38,7 @@ namespace WindowsFormsApp4
                              UserId = int.Parse(item.Element("userId").Value),
                              UserName = item.Element("userName").Value
                          }).ToList<Book>();
-                string usersOutput = File.ReadAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Users.xml");
+                string usersOutput = File.ReadAllText(@"./Users.xml"); //xml 파일을 찾지 못하여 "C:\Users\Subin\source\repos\WindowsFormsApp4\Users.xml"라는 주소를 이용함
                 XElement usersXElement = XElement.Parse(usersOutput);
                 Users = (from item in usersXElement.Descendants("user")
                          select new User()
@@ -93,16 +93,16 @@ namespace WindowsFormsApp4
             }
             managersOutput += "</managers>";
 
-            File.WriteAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Books.xml", booksOutput);
-            File.WriteAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Users.xml", usersOutput);
-            File.WriteAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Managers.xml", managersOutput);
+            File.WriteAllText(@"./Books.xml", booksOutput);
+            File.WriteAllText(@"./Users.xml", usersOutput);         //상단의 주석과 같이 파일위치를 직접 입력했었음
+            File.WriteAllText(@"./Managers.xml", managersOutput);
         }
 
         public static void Login()
         {
             try
             {
-                string managersOutput = File.ReadAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Managers.xml");
+                string managersOutput = File.ReadAllText(@"./Managers.xml"); //상단의 주석과 같이 파일위치를 직접 입력했었음
                 XElement managersXElement = XElement.Parse(managersOutput);
                 Managers = (from item in managersXElement.Descendants("manager")
                          select new Manager()
@@ -130,7 +130,7 @@ namespace WindowsFormsApp4
             }
             signUp += "</users>";
 
-            File.WriteAllText(@"C:\Users\Subin\source\repos\WindowsFormsApp4\Managers.xml", signUp);
+            File.WriteAllText(@"./Managers.xml", signUp); // 상단의 주석과 같이 파일위치를 직접 입력했었음
         }
     }
 }
