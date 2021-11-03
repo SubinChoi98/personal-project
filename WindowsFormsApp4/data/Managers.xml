@@ -11,4 +11,8 @@
  <id>1</id>
  <password>2</password>
 </manager>
+<manager>
+ <id>1234</id>
+ <password>5678</password>
+</manager>
 </managers>

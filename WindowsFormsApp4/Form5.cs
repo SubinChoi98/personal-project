@@ -70,17 +70,22 @@ namespace WindowsFormsApp4
                 {
                     if (textBox1.Text.Trim() == "")
                     {
+                        label4.Visible = false;
+                        label6.Visible = false;
                         label7.Visible = false;
                         label7.Visible = true;
                     }
                     else if (DataManager.Managers.Exists((x) => x.Id == textBox1.Text))
                     {
+                        label4.Visible = false;
+                        label6.Visible = false;
                         label7.Visible = false;
                         label4.Visible = true;
                     }
                     else
                     {
                         label4.Visible = false;
+                        label6.Visible = false;
                         label7.Visible = false;
                         label6.Visible = true;
                         IdOverlapCheck = true;

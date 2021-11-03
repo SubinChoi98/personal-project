@@ -30,6 +30,7 @@ namespace WindowsFormsApp4
             button2.Click += Button2_Click;
             button3.Click += Button3_Click;
             button4.Click += Button4_Click;
+            button5.Click += Button5_Click;
         }
 
         private void DataGridView1_CurrentCellChanged(object sender, EventArgs e)
@@ -162,6 +163,13 @@ namespace WindowsFormsApp4
         private void Button4_Click(object sender, EventArgs e)
         {
             new Form3().ShowDialog();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new Form4().ShowDialog();
+            Close();
         }
     }
 }
