@@ -54,6 +54,7 @@ namespace WindowsFormsApp4
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,7 +67,6 @@ namespace WindowsFormsApp4
             this.isBorrowedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.borrowedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -299,6 +299,15 @@ namespace WindowsFormsApp4
             this.label15.TabIndex = 26;
             this.label15.Text = "label15";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(701, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "로그아웃";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -366,15 +375,6 @@ namespace WindowsFormsApp4
             // bookBindingSource
             // 
             this.bookBindingSource.DataSource = typeof(WindowsFormsApp4.Book);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(701, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "로그아웃";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

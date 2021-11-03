@@ -145,16 +145,6 @@ namespace WindowsFormsApp4
             }
         }
 
-        private void 도서관리TollStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Form2().ShowDialog();
-        }
-
-        private void 사용자관리TollStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Form3().ShowDialog();
-        }
-
         private void Button3_Click(object sender, EventArgs e)
         {
             new Form2().ShowDialog();
